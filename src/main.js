@@ -3,17 +3,18 @@ var api_url = "http://localhost:8000/api";
 
 // konfigurasi route
 var router = [{
-    path: "/",
-    name: "Home",
-    component: httpVueLoader("./src/components/Home.vue")
-}, {
-    path: "/book",
-    name: "Book",
-    component: httpVueLoader("./src/components/Book.vue")
-}, ];
+        path: "/",
+        name: "Home",
+        component: httpVueLoader("./src/components/Home.vue")
+    },
+    {
+        path: "/book",
+        name: "Book",
+        component: httpVueLoader("./src/components/Book.vue")
+    },
+];
 
-var routers = new VueRouter({ routes: routers, base: "/" });
-
+var routers = new VueRouter({ routes: router, base: "/" });
 
 // instance vue
 var app = new Vue({
