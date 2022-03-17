@@ -1,5 +1,6 @@
 //base URL API
 var api_url = "http://localhost:8000/api";
+var api_cover = "http://localhost:8000";
 
 // konfigurasi route
 var router = [{
@@ -11,6 +12,11 @@ var router = [{
         path: "/book",
         name: "Book",
         component: httpVueLoader("./src/components/Book.vue")
+    },
+    {
+        path: "/member",
+        name: "Member",
+        component: httpVueLoader("./src/components/Member.vue")
     },
 ];
 

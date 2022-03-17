@@ -37,6 +37,10 @@
                                     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                     Member
                                 </router-link>
+                                <router-link to="/transaction" class="nav-link">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                    Transaction
+                                </router-link>
 
                         </div>
                     </div>
