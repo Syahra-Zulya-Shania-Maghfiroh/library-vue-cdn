@@ -167,9 +167,16 @@ module.exports = {
 
             axios.post(api_url + '/book/UploadCover/' + id_book, form, token)
             .then( response => {
-                alert(response.data.message)       
+                Swal.fire({
+                    tittle : 'Success!',
+                    text : response.data.message,
+                    icon : 'success',
+                    confirmButtonText : 'OK!'
+                })
+                
+                location.reload();
             })
-                this.getData()
+            
         },
         Save: function() {
             // mapping header token
@@ -189,8 +196,12 @@ module.exports = {
             if(this.action === 'insert'){ //POST
             axios.post(api_url + '/book', form, token)
             .then( response => {
-                alert(response.data.message)
-                
+                Swal.fire({
+                    tittle : 'Success!',
+                    text : response.data.message,
+                    icon : 'success',
+                    confirmButtonText : 'OK!'
+                })
 
                 this.getData()
             })
@@ -198,7 +209,12 @@ module.exports = {
             } else { //PUT
             axios.put(api_url + '/book/' + this.id_book, form, token)
                 .then( response => {
-                    alert(response.data.message)
+                    Swal.fire({
+                        tittle : 'Success!',
+                        text : response.data.message,
+                        icon : 'success',
+                        confirmButtonText : 'OK!'
+                    })
 
                     this.getData()
                 })
@@ -235,14 +251,7 @@ module.exports = {
                             this.getData()
                         })
 
-                    } else {
-                        Swal.fire({
-                            tittle : 'Cancelled!',
-                            text : response.data.message,
-                            icon : 'error',
-                            confirmButtonText : 'OK!'
-                        })
-                    }
+                    } 
                 })    
         }
     },

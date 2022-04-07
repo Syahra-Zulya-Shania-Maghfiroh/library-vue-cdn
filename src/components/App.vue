@@ -33,13 +33,17 @@
                                     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                     Book
                                 </router-link>
-                                <router-link to="/member" class="nav-link">
+                                    <router-link to="/grade" class="nav-link">
                                     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                    Member
+                                    Grade
                                 </router-link>
-                                <router-link to="/transaction" class="nav-link">
+                                <router-link to="/student" class="nav-link">
                                     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                    Transaction
+                                    Student
+                                </router-link>
+                                <router-link to="/borrow" class="nav-link">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                    Book Borrow
                                 </router-link>
 
                         </div>
