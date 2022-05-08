@@ -3,7 +3,7 @@
          <div class="container-fluid px-4">
             <h1 class="mt-4">Book Return</h1>
             <ol class="breadcrumb mb-4">
-                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
                 <li class="breadcrumb-item active">Book Return</li>
             </ol>
 
@@ -11,30 +11,28 @@
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
                         List Book Return
-                        <button v-on:click="Add()" type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary btn-sm float-right">Add</button>
+                    <button v-on:click="Add()" type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary btn-sm float-right">Add</button>
                 </div>
                 <div class="card-body">
                     <table id="datatablesSimple" class="table table-hover table-striped">
                         <thead>
                             <tr>
-                                <th>No</th>
-                                <th>Name</th>
-                                <th>Class</th>
-                                <th>Major</th>
-                                <th>Action</th>
+                                <th>NO</th>
+                                <th>DATE OF RETURN</th>
+                                <th>FINE</th>
+                                <th>ACTION</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- <tr v-for="(member, index) in filteredMember" :key="index">
-                                <td> {{ member.student_id }} </td>
-                                <td> {{ member.student_name }} </td>
-                                <td> {{ member.class_name }} </td>
-                                <td> {{ member.group }} </td>
+                            <tr v-for="(lr, index) in list_return" :key="index">
+                                <td> {{ index+1 }} </td>
+                                <td> {{ lr.dateOfReturn }} </td>
+                                <td> {{ lr.fine }} </td>
                                 <td>
                                     <button class="btn btn-info"  v-on:click="editData(member)" type="button" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-pencil-alt fa-fw"></i></button>
                                     <button class="btn btn-danger" v-on:click="deleteData(member.student_id)" ><i class="fas fa-trash-alt fa-fw"></i></button>
                                 </td>
-                            </tr> -->
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -42,3 +40,30 @@
         </div>
     </div>
 </template>
+
+<script>
+module.exports = {
+    data : function(){
+        return {
+            list_return: '',
+            id_borrowing_book: '',
+            dateOfReturn: '',
+            fine: '',
+        }
+    },
+    methods: {
+        getData: function(){
+             let token = {
+                headers: { "Authorization": "Bearer " + this.$cookies.get('Authorization') }
+            }
+            axios.get(api_url + "/return", token)
+            .then(response => {
+                this.list_return = response.data;
+            })
+        }
+    },
+    mounted(){
+        this.getData();
+    }
+}
+</script>

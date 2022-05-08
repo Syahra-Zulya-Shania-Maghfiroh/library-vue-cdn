@@ -24,28 +24,31 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                                <router-link to="/" class="nav-link">
-                                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                    Home
-                                </router-link>
-                                <div class="sb-sidenav-menu-heading">Master data</div>
-                                <router-link to="/book" class="nav-link">
-                                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                    Book
-                                </router-link>
-                                    <router-link to="/grade" class="nav-link">
-                                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                    Grade
-                                </router-link>
-                                <router-link to="/student" class="nav-link">
-                                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                    Student
-                                </router-link>
-                                <router-link to="/borrow" class="nav-link">
-                                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                    Book Borrow
-                                </router-link>
-
+                            <router-link to="/" class="nav-link">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Home
+                            </router-link>
+                            <div class="sb-sidenav-menu-heading">Master data</div>
+                            <router-link to="/book" class="nav-link">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Book
+                            </router-link>
+                                <router-link to="/grade" class="nav-link">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Grade
+                            </router-link>
+                            <router-link to="/student" class="nav-link">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Student
+                            </router-link>
+                            <router-link to="/borrow" class="nav-link">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Book Borrow
+                            </router-link>
+                            <router-link to="/return" class="nav-link">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Book Return
+                            </router-link>
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">

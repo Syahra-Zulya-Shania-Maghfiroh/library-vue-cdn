@@ -29,6 +29,11 @@ var router = [{
         name: "Borrow",
         component: httpVueLoader("./src/components/BookBorrow.vue")
     },
+    {
+        path: "/return",
+        name: "Return",
+        component: httpVueLoader("./src/components/BookReturn.vue")
+    },
 ];
 
 var routers = new VueRouter({ routes: router, base: "/" });

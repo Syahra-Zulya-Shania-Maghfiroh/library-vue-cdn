@@ -71,6 +71,7 @@
                         <div class="mb-3">
                             <label for="id_grade" class="form-label">Grade</label>
                             <select class="form-control" id="id_grade" v-model="id_grade">
+                                <option value="" disabled>-- Choose Grade --</option>
                                 <option v-for="lg in list_grade" :key='lg' v-bind:value="lg.id_grade">{{lg.grade_name}} - {{lg.group}}</option>
                             </select>
                         </div>
@@ -88,7 +89,7 @@
                         <div class="mb-3">
                             <label for="gender" class="form-label">Gender</label>
                             <select name="gender" v-model="gender" class="form-control">
-                                <option></option>
+                                <option value="" disabled>-- Choose Book --</option>
                                 <option value="M">Male</option>
                                 <option value="F">Female</option>
                             </select>
