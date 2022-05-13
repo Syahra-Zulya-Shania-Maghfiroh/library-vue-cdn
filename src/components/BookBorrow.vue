@@ -122,13 +122,7 @@
                       </div>
 
                       <div class="mb-3">
-                        <label for="born" class="form-label">Return Date</label>
-                        <input
-                          type="date"
-                          class="form-control"
-                          id="return_date"
-                          v-model="return_date"
-                        />
+                        <label for="born" class="form-label"><h6>The return date of the book will be automatically filled in 7 days after the borrowing date</h6></label>
                       </div>
                     </div>
                   </div>
@@ -398,10 +392,10 @@ module.exports = {
     },
     Add: function () {
       (this.id_student = ""),
-        (this.student_name = ""),
-        (this.borrow_date = ""),
-        (this.return_date = ""),
-        (this.action = "insert");
+      (this.student_name = ""),
+      (this.borrow_date = ""),
+      (this.return_date = ""),
+      (this.action = "insert");
     },
     AddDetail: function (data) {
       this.id_student = data.id_student;

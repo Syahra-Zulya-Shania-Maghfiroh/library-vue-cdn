@@ -11,7 +11,6 @@
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
                         List Book Return
-                    <button v-on:click="Add()" type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary btn-sm float-right">Add</button>
                 </div>
                 <div class="card-body">
                     <table id="datatablesSimple" class="table table-hover table-striped">
