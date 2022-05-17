@@ -29,7 +29,7 @@
                 <th>GRADE NAME</th>
                 <th>BORROW DATE</th>
                 <th>RETURN DATE</th>
-                <!-- <th>STATUS</th> -->
+                <th>STATUS</th>
                 <th>ACTION</th>
               </tr>
             </thead>
@@ -40,7 +40,7 @@
                 <th>GRADE NAME</th>
                 <th>BORROW DATE</th>
                 <th>RETURN DATE</th>
-                <!-- <th>STATUS</th> -->
+                <th>STATUS</th>
                 <th>ACTION</th>
               </tr>
             </tfoot>
@@ -51,6 +51,7 @@
                 <td>{{ lbw.grade_name }}</td>
                 <td>{{ lbw.borrow_date }}</td>
                 <td>{{ lbw.return_date }}</td>
+                <td>{{ lbw.status }}</td>
                 <td>
                   <button
                     class="btn btn-secondary"
@@ -294,6 +295,7 @@
               </tfoot>
               <tbody>
                 <tr v-for="lr in list_return" :key="lr">
+                  console.log(lr);
                   <td>{{ lr.id_borrowing_book }}</td>
                   <td>{{ lr.dateOfReturn }}</td>
                   <td>{{ lr.fine }}</td>
@@ -345,6 +347,7 @@ module.exports = {
       grade_name: "",
       borrow_date: "",
       return_date: "",
+      fine: "",
       id_book_loan_details: "",
       id_borrowing_book: "",
       detail: "",
@@ -484,7 +487,7 @@ module.exports = {
         },
       };
       axios
-        .get(api_url + "/return/{id_book_return}/" + id_borrowing_book, token)
+        .get(api_url + "/return/" + id_borrowing_book, token)
         .then((response) => {
           this.list_return = response.data;
         });
